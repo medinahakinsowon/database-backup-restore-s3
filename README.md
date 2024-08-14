@@ -106,6 +106,7 @@ CREATE TABLE Categories (
 -- Create Products Table
 
 CREATE TABLE Products (
+
     ProductID INT PRIMARY KEY,
     Name VARCHAR(100),
     Description TEXT,
@@ -113,9 +114,11 @@ CREATE TABLE Products (
     CategoryID INT,
     StockQuantity INT,
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
+    
 );
 
 -- Create Customers Table
+
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY,
     FirstName VARCHAR(50),
@@ -129,6 +132,7 @@ CREATE TABLE Customers (
 );
 
 -- Create Orders Table
+
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
     CustomerID INT,
@@ -139,6 +143,7 @@ CREATE TABLE Orders (
 );
 
 -- Create OrderDetails Table
+
 CREATE TABLE OrderDetails (
     OrderDetailID INT PRIMARY KEY,
     OrderID INT,
@@ -150,6 +155,7 @@ CREATE TABLE OrderDetails (
 );
 
 -- Create Payments Table
+
 CREATE TABLE Payments (
     PaymentID INT PRIMARY KEY,
     OrderID INT,
@@ -166,9 +172,11 @@ CREATE TABLE Payments (
 ------ SEED DATA for Our Database ------
 
 -- Use the created database
+
 USE OnlineMerchStore;
 
 -- Insert dummy data into Categories table
+
 INSERT INTO Categories (CategoryID, CategoryName)
 VALUES
     (1, 'Electronics'),
@@ -176,6 +184,7 @@ VALUES
     (3, 'Home & Kitchen');
 
 -- Insert dummy data into Products table
+
 INSERT INTO Products (ProductID, Name, Description, Price, CategoryID, StockQuantity)
 VALUES
     (1, 'Laptop', 'High-performance laptop', 1200.00, 1, 50),
@@ -183,18 +192,21 @@ VALUES
     (3, 'Coffee Maker', 'Automatic coffee maker', 45.00, 3, 30);
 
 -- Insert dummy data into Customers table
+
 INSERT INTO Customers (CustomerID, FirstName, LastName, Email, Address, City, State, Country, Phone)
 VALUES
     (1, 'John', 'Doe', 'john@example.com', '123 Main St', 'Anytown', 'CA', 'USA', '123-456-7890'),
     (2, 'Jane', 'Smith', 'jane@example.com', '456 Elm St', 'Othertown', 'NY', 'USA', '987-654-3210');
 
 -- Insert dummy data into Orders table
+
 INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount, Status)
 VALUES
     (1, 1, '2023-01-10', 1200.00, 'Completed'),
     (2, 2, '2023-01-15', 70.00, 'Pending');
 
 -- Insert dummy data into OrderDetails table
+
 INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity, Subtotal)
 VALUES
     (1, 1, 1, 1, 1200.00),
@@ -202,6 +214,7 @@ VALUES
     (3, 2, 3, 1, 20.00);
 
 -- Insert dummy data into Payments table
+
 INSERT INTO Payments (PaymentID, OrderID, Amount, PaymentDate, PaymentMethod)
 VALUES
     (1, 1, 1200.00, '2023-01-10', 'Credit Card'),
