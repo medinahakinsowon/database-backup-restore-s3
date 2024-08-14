@@ -179,43 +179,58 @@ USE OnlineMerchStore;
 
 INSERT INTO Categories (CategoryID, CategoryName)
 VALUES
+
     (1, 'Electronics'),
+    
     (2, 'Clothing'),
+    
     (3, 'Home & Kitchen');
 
 -- Insert dummy data into Products table
 
 INSERT INTO Products (ProductID, Name, Description, Price, CategoryID, StockQuantity)
 VALUES
+
     (1, 'Laptop', 'High-performance laptop', 1200.00, 1, 50),
+    
     (2, 'T-Shirt', 'Cotton T-Shirt', 25.00, 2, 100),
+    
     (3, 'Coffee Maker', 'Automatic coffee maker', 45.00, 3, 30);
 
 -- Insert dummy data into Customers table
 
 INSERT INTO Customers (CustomerID, FirstName, LastName, Email, Address, City, State, Country, Phone)
 VALUES
+
     (1, 'John', 'Doe', 'john@example.com', '123 Main St', 'Anytown', 'CA', 'USA', '123-456-7890'),
+    
     (2, 'Jane', 'Smith', 'jane@example.com', '456 Elm St', 'Othertown', 'NY', 'USA', '987-654-3210');
 
 -- Insert dummy data into Orders table
 
 INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount, Status)
 VALUES
+
     (1, 1, '2023-01-10', 1200.00, 'Completed'),
+    
     (2, 2, '2023-01-15', 70.00, 'Pending');
 
 -- Insert dummy data into OrderDetails table
 
 INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity, Subtotal)
 VALUES
+
     (1, 1, 1, 1, 1200.00),
+    
     (2, 2, 2, 2, 50.00),
+    
     (3, 2, 3, 1, 20.00);
 
 -- Insert dummy data into Payments table
 
 INSERT INTO Payments (PaymentID, OrderID, Amount, PaymentDate, PaymentMethod)
 VALUES
+
     (1, 1, 1200.00, '2023-01-10', 'Credit Card'),
+    
     (2, 2, 70.00, '2023-01-15', 'PayPal');
