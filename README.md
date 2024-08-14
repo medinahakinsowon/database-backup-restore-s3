@@ -87,18 +87,22 @@ DATABASE, TABLES and SEED DATA
 
 
 -- Create Database
+
 CREATE DATABASE OnlineMerchStore;
 
 -- Use the created database
+
 USE OnlineMerchStore;
 
 -- Create Categories Table
+
 CREATE TABLE Categories (
     CategoryID INT PRIMARY KEY,
     CategoryName VARCHAR(50)
 );
 
 -- Create Products Table
+
 CREATE TABLE Products (
     ProductID INT PRIMARY KEY,
     Name VARCHAR(100),
