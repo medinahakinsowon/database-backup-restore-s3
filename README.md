@@ -134,6 +134,7 @@ CREATE TABLE Customers (
 -- Create Orders Table
 
 CREATE TABLE Orders (
+
     OrderID INT PRIMARY KEY,
     CustomerID INT,
     OrderDate DATE,
@@ -145,6 +146,7 @@ CREATE TABLE Orders (
 -- Create OrderDetails Table
 
 CREATE TABLE OrderDetails (
+
     OrderDetailID INT PRIMARY KEY,
     OrderID INT,
     ProductID INT,
@@ -157,6 +159,7 @@ CREATE TABLE OrderDetails (
 -- Create Payments Table
 
 CREATE TABLE Payments (
+
     PaymentID INT PRIMARY KEY,
     OrderID INT,
     Amount DECIMAL(10, 2),
