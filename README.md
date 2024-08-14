@@ -6,10 +6,15 @@ DB Backup and Restore from S3 for Microsoft SQL
 
 
 1 Create DB - Microsoft Sql Server (No Public Access, it will be accessed via a DB Bastion using SSM Fleet Manager)
+
 2 Create EC2 - SSM Access Role which will be used during instance Creation
+
 3 Create sql server backup role for RDS s3 access that will be attached to our option group
+
 4 Launch a windows 2022 EC2 Instance
+
 5 Connect DB to EC2 instance
+
 6 Install SSMS on the EC2 instance
 7 Create Database, Tables and Seed the Database. See all SQL Commands to do this below
 8 Run Sample Queries to confirm all works
